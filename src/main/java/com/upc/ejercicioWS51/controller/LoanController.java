@@ -63,7 +63,7 @@ public class LoanController {
 
     private void existsByCodeStudentAndBookAndBookLoan(Loan loan, Book book){
         if(loanRepository.existsByCodeStudentAndBookAndBookLoan(loan.getCodeStudent(), book, true)){
-            throw new ValidationException("El prestamo del libro " + book.getTitle() + " no es posible porque ya fue prestado por el alumno"+ loan.getCodeStudent());
+            throw new ValidationException("El prestamo del libro " + book.getTitle() + " no es posible porque ya fue prestado por el alumno "+ loan.getCodeStudent());
         }
     }
 }
