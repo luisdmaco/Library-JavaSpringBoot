@@ -37,7 +37,7 @@ public class LoanController {
         return new ResponseEntity<List<Loan>>(loanRepository.findByCodeStudent(codeStudent), HttpStatus.OK);
     }
 
-    //EndPoint: http://localhost:8080/api/library/v1/loans
+    //EndPoint: http://localhost:8080/api/library/v1/books/1/loans
     //Method: GET
     @Transactional(readOnly = true)
     @RequestMapping("books/{id}/loans")
